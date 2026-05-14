@@ -33,7 +33,8 @@ server.define(Constants.ROOM_NAME, GameRoom);
 app.use(express.static(PUBLIC_DIR));
 
 // If you don't want people accessing your server stats, comment this line.
-app.use('/colyseus', monitor(server));
+// Reemplaza tu línea actual por esta versión sin pasar la variable 'server':
+app.use('/colyseus', monitor({}));
 
 // Serve the frontend client
 app.get('*', (req: any, res: any) => {
